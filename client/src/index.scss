@@ -1,0 +1,23 @@
+@import "react-slideshow-image/dist/styles.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+@import "css/variables.scss";
+@import "css/utilities.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+// Header / Navigation
+
+header {
+}
