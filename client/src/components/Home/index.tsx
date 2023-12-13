@@ -6,8 +6,8 @@ import Slider from "./Slider";
 
 function Home() {
   return (
-    <section id="hero">
-      <div>
+    <section className="home container">
+      <div className="home__hero">
         <Categories />
         <Slider />
       </div>

@@ -3,10 +3,7 @@ const puppeteer = require("puppeteer");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  const CARD = ".card-jfy-item";
-  const IMAGE = ".card-jfy-image .image";
-
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({ headless: "new" });
   const page = await browser.newPage();
 
   await page.goto("https://www.daraz.pk/#hp-just-for-you");
@@ -34,7 +31,7 @@ router.get("/", async (req, res) => {
             ),
           },
           rating: Math.ceil(Math.random() * (5 - 3) + 3),
-          comments: scrap(".card-jfy-ratings-comment"),
+          comments: scrap(".card-jfy-footer .card-jfy-ratings-comment"),
         };
       }
     );
